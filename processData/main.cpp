@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    processData *processData = new processData;
-    qmlRegisterSingletonType<processData>("processData", 1, 0, "ProcessData", UserInstance);
+    processdata *processdata = new processData;
+    qmlRegisterSingletonType<processdata>("processdata", 1, 0, "ProcessData", UserInstance);
 
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));

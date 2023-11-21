@@ -1,5 +1,12 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>HeadImage.qml</file>
+        <file>ArmImage.qml</file>
+        <file>HandImage.qml</file>
+        <file>BodyImage.qml</file>
+        <file>NeckImage.qml</file>
+        <file>ShoulderImage.qml</file>
+        
     </qresource>
 </RCC>

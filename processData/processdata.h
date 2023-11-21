@@ -56,6 +56,7 @@ public:
     struct skelPart skelPartStruct;
     double xPosition ;
     double yPosition ;
+    Q_INVOKABLE double calSlope(double x1,double y1,double x2,double y2);
 
 
 signals:
@@ -64,7 +65,9 @@ signals:
 
     //Signals For send the Coordinates Data to qml
     void headPosition(double x, double y);
-    void MousePosition(double x, double y);
+
+    void leftearPosition(double x, double y);
+    void rightearPosition(double x, double y);
 
     void bodyPosition(double x, double y);
 
