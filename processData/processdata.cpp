@@ -63,6 +63,9 @@ void processdata::jsonParsing(QByteArray tmpbuffer)
 //        yPosition = yPosition/1000;
 
         switch (i) {
+        case 0 :
+            emit headPosition(xPosition,yPosition);
+            break;
         case 7:
             emit leftEarPosition(xPosition,yPosition);
             break;
