@@ -58,6 +58,7 @@ void processdata::jsonParsing(QByteArray tmpbuffer)
         QJsonObject coorObj = coordArray.at(i).toObject();
 
         xPosition = coorObj["x"].toDouble()/1000;
+        qDebug()<<xPosition;
 //        xPosition = xPosition/1000;
         yPosition = coorObj["y"].toDouble()/1000;
 //        yPosition = yPosition/1000;
@@ -67,36 +68,36 @@ void processdata::jsonParsing(QByteArray tmpbuffer)
             emit headPosition(xPosition,yPosition);
             break;
         case 7:
-            emit leftEarPosition(xPosition,yPosition);
-            break;
-        case 8:
             emit rightEarPosition(xPosition,yPosition);
             break;
-        case 11:
-            emit leftShoulderPosition(xPosition,yPosition);
+        case 8:
+            emit leftEarPosition(xPosition,yPosition);
             break;
-        case 12:
+        case 11:
             emit rightShoulderPosition(xPosition,yPosition);
             break;
-        case 13:
-            emit leftArmPosition(xPosition,yPosition);
+        case 12:
+            emit leftShoulderPosition(xPosition,yPosition);
             break;
-        case 14:
+        case 13:
             emit rightArmPosition(xPosition,yPosition);
             break;
+        case 14:
+            emit leftArmPosition(xPosition,yPosition);
+            break;
         case 15:
-            emit leftHandPosition(xPosition,yPosition);
+            emit rightHandPosition(xPosition,yPosition);
             break;
         case 16:
-            emit rightHandPosition(xPosition,yPosition);
+            emit leftHandPosition(xPosition,yPosition);
             break;
         case 17:
             //leftpinky coordinates for hand rotation
-            emit leftPinkyPosition(xPosition,yPosition);
+            emit rightPinkyPosition(xPosition,yPosition);
             break;
         case 18:
             //rightpinky coordinates for hand rotation
-            emit rightPinkyPosition(xPosition,yPosition);
+            emit leftPinkyPosition(xPosition,yPosition);
             break;
         default:
             break;

@@ -9,9 +9,9 @@ static QObject *UserInstance(QQmlEngine *engine, QJSEngine *scriptEngine)
 
     qDebug() << "Creating";
 
-    processData *m_processData = processData::getInstance();
+    processdata *m_processdata = processdata::getInstance();
 
-    return m_processData;
+    return m_processdata;
 }
 
 int main(int argc, char *argv[])
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    processdata *processdata = new processData;
+    processdata *m_processdata = new processdata;
     qmlRegisterSingletonType<processdata>("processdata", 1, 0, "ProcessData", UserInstance);
 
 

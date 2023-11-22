@@ -9,7 +9,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
-
+#include <iostream>
 struct skelCoordinates
 {
     int x;
@@ -66,8 +66,8 @@ signals:
     //Signals For send the Coordinates Data to qml
     void headPosition(double x, double y);
 
-    void leftearPosition(double x, double y);
-    void rightearPosition(double x, double y);
+    void leftEarPosition(double x, double y);
+    void rightEarPosition(double x, double y);
 
     void bodyPosition(double x, double y);
 
@@ -80,8 +80,8 @@ signals:
     void leftHandPosition(double x, double y);
     void rightHandPosition(double x, double y);
 
-    void leftThumbPosition(double x, double y);
-    void rightThumbPosition(double x, double y);
+    void leftPinkyPosition(double x, double y);
+    void rightPinkyPosition(double x, double y);
 
 
 public slots:
